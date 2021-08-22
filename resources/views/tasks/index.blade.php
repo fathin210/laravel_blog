@@ -8,6 +8,7 @@
     </form>
 
     <ul>
+        @if (isset($tasks))
         @foreach ($tasks as $task)
         <li>
             {{ $task->list }}
@@ -22,5 +23,6 @@
         
         </li>
         @endforeach
+        @endif
     </ul>
 </x-app-layout>

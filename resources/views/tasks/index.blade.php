@@ -9,7 +9,18 @@
 
     <ul>
         @foreach ($tasks as $task)
-            <li>{{ $task->list }} - <a href="/tasks/{{ $task->id }}/edit"><button>Edit</button></a></li>
+        <li>
+            {{ $task->list }}
+            <div>
+                <a href="/tasks/{{ $task->id }}/edit"><button>Edit</button></a>
+                <form action="/tasks/{{ $task->id }}" method="post" style="display: inline">
+                @method("delete")
+                @csrf
+                <button type="submit">Delete</button>
+                </form>
+            </div>
+        
+        </li>
         @endforeach
     </ul>
 </x-app-layout>

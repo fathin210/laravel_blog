@@ -9,7 +9,7 @@
 
     <ul>
         @foreach ($tasks as $task)
-            <li>{{ $task->list }}</li>
+            <li>{{ $task->list }} - <a href="/tasks/{{ $task->id }}/edit"><button>Edit</button></a></li>
         @endforeach
     </ul>
 </x-app-layout>

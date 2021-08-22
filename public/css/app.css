@@ -24,3 +24,17 @@ a:hover {
     padding: 10px;
     display: inline-block;
 }
+
+.alert {
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.alert-header {
+    background-color: khaki;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+}

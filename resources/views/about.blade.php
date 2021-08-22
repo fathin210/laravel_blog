@@ -9,7 +9,7 @@
 </head>
 <body>
     @include("layouts.navbar")
-    <h1>First Post</h1>
+    <h1>About Page</h1>
     <script src="{{ asset("js/app.js") }}"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset("css/app.css") }}">
 </head>
 <body>
+    @include("layouts.navbar")
     <h1>Contact Page</h1>
     <script src="{{ asset("js/app.js") }}"></script>
 </body>

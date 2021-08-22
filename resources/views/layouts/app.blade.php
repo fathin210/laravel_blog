@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="{{ asset("css/app.css") }}">
 </head>
 <body>
-    
-    <x-navbar></x-navbar>
+    <x-navbar/>
 
-    @yield("content")
+    {{ $slot }}
 
     <script src="{{ asset("js/app.js") }}"></script>
 </body>

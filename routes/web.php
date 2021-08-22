@@ -15,3 +15,4 @@ Route::get('contact', [ContactController::class, 'create']);
 Route::post('contact', [ContactController::class, 'store']);
 
 Route::get('tasks', [TaskController::class, "index"]);
+Route::post('tasks', [TaskController::class, "store"]);

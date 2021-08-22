@@ -9,11 +9,20 @@ class TaskController extends Controller
 {
     public function index()
     {
-       $tasks =  DB::table('tasks')->get();
 
        return view("tasks.index", [
-           "tasks" => DB::table('tasks')->get()
+           "tasks" => DB::table('tasks')->orderByDesc("id")->get()
        ]);
-      
+    }
+
+
+    
+    public function store(Request $request)
+    {
+        DB::table('tasks')->insert([
+            'list' => $request->list
+        ]);
+        
+        return back();
     }
 }

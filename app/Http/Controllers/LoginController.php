@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -27,7 +28,7 @@ class LoginController extends Controller
         // $credentials = $request->only("email","password");
 
         if(Auth::attempt($attributes)){
-            return redirect("/")->with("success","You're now login");
+            return redirect(RouteServiceProvider::HOME)->with("success","You're now login");
         }
 
         throw ValidationException::withMessages([

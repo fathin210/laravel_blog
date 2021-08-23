@@ -16,7 +16,7 @@ class RegisterationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "username" => ["required", "unique:users","alpha","min:8","max:25"],
+            "username" => ["required", "unique:users","alpha_num","min:8","max:25"],
             "email" => ["required", "email", "unique:users"],
             "name" => ["required", "string", "min:3"],
             "password" => ["required", "min:8"]
@@ -28,6 +28,8 @@ class RegisterationController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
+
+        session()->flash("registered","selamat anda berhasil registrasi!");
 
         return redirect("/");
     }

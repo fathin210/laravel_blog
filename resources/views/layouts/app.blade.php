@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} | FATDEV</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
         {{ $styles }}
 </head>
 <body>
     <x-navbar/>
-
-    {{ $slot }}
-
-    <script src="/js/app.js"></script>
+    <div class="pt-4">
+        {{ $slot }}
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

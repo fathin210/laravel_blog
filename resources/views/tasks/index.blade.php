@@ -23,8 +23,8 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
             {{ $task->list }}
             <div>
-                <a class="btn btn-primary" href="/tasks/{{ $task->id }}/edit">Edit</a>
-                <form action="/tasks/{{ $task->id }}" method="post" style="display: inline">
+                <a class="btn btn-primary" href="{{ route("tasks.edit", $task->id) }}">Edit</a>
+                <form action="{{ route("tasks.destroy", $task->id) }}" method="post" style="display: inline">
                 @method("delete")
                 @csrf
                 <button class="btn btn-danger" type="submit">Delete</button>

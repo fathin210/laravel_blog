@@ -1,11 +1,14 @@
 <x-app-layout>
-    <h1>Update</h1>
-    
-    <form action="/tasks/{{ $task->id }}" method="post">
-        @method("put")
-        @csrf
-        <input type="text" name="list" id="list" value="{{ $task->list }}">
-        <button type="submit">Update</button>
-    </form>
+
+    <div class="container">
+        <div class="col-md-6">
+            <form action="{{ route("tasks.update", $task->id) }}" method="post">
+                @method("put")
+                @csrf
+                <input type="text" name="list" class="form-control mb-2" id="list" value="{{ $task->list }}">
+                <button class="btn btn-primary" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
 
 </x-app-layout>

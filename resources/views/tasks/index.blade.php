@@ -2,18 +2,7 @@
     <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    Create New Task
-                </div>
-                <div class="card-body">
-                    <form action="/tasks" method="post" class="d-flex">
-                        @csrf
-                        <input type="text" class="form-control me-2" name="list" id="list">
-                        <button class="btn btn-primary" type="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
+            @include("tasks._create")
         </div>
     </div>
 

@@ -27,10 +27,10 @@ class TaskController extends Controller
         return back();
     }
 
-    public function edit($id)
+    public function edit(Task $task)
     {
-       $task = Task::where("id",$id)->first();
-       return view("tasks.edit", compact("task"));
+       dd($task->list); 
+       return view("tasks.edit", ["task" => $task]);
     }
 
     public function update(Request $request, $id)
